@@ -1,0 +1,13 @@
+{
+  "scripts": {
+    "start": "sls offline start --skipCacheInvalidation -s dev",
+    "deploy": "sls deploy -s dev"
+  },
+  "dependencies": {
+    "dotenv": "^10.0.0",
+    "lodash.isempty": "^4.4.0"
+  },
+  "devDependencies": {
+    "serverless-offline": "^7.0.0"
+  }
+}
