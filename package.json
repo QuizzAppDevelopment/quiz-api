@@ -1,6 +1,6 @@
 {
   "scripts": {
-    "start": "sls offline start --skipCacheInvalidation -s dev",
+    "start": "sls offline start --skipCacheInvalidation -s api",
     "deploy": "sls deploy -s dev"
   },
   "dependencies": {

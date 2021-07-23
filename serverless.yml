@@ -11,14 +11,14 @@ provider:
 
 functions:
   post:
-    handler: handler.postQuiz
+    handler: handler.post
     events:
       - http:
           path: quiz
           method: post
           cors: true
   get:
-    handler: handler.getQuiz
+    handler: handler.get
     events:
       - http:
           path: quiz
