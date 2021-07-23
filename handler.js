@@ -53,3 +53,24 @@ module.exports.create = async (event, context, callback) => {
     returnError(error);
   }
 };
+
+module.exports.get = async (event, context, callback) => {
+  context.callbackWaitsForEmptyEventLoop = false;
+
+  if (isEmpty(event.body)) {
+    return callback(null, createErrorResponse(400, "Missing details"));
+  }
+  const { title, description, reminder, status, category } = JSON.parse(
+    event.body
+  );
+
+  try {
+    console.log({ title, description, reminder, status, category });
+    callback(null, {
+      statusCode: 200,
+      body: JSON.stringify({ title, description, reminder, status, category }),
+    });
+  } catch (error) {
+    returnError(error);
+  }
+};
